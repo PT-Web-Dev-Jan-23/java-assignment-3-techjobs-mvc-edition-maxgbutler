@@ -14,28 +14,28 @@
         <th:block th:each="job : ${jobs}">
             <table class="job-listing">
                 <tr>
-                    <td>ID</td>
+                    <td>ID: </td>
                     <td th:text="${job.id}">Job ID</td>
                 </tr>
                 <tr>
-                    <td>Name</td>
+                    <td>Name: </td>
                     <td th:text="${job.name}">Job Name</td>
                 </tr>
                 <tr>
-                    <td>Employer</td>
-                    <td th:text="${job.employer}">Job Employer</td>
+                    <td>Employer: </td>
+                    <td><a th:href="@{/list/jobs(column=employer,value=${job.employer})}" th:text="${job.employer}">Job Employer</a></td>
                 </tr>
                 <tr>
-                    <td>Location</td>
-                    <td th:text="${job.location}">Job Location</td>
+                    <td>Location: </td>
+                    <td><a th:href="@{/list/jobs(column=location,value=${job.location})}" th:text="${job.location}">Job Location</a></td>
                 </tr>
                 <tr>
-                    <td>Position Type</td>
-                    <td th:text="${job.positionType}">Job Position Type</td>
+                    <td>Position Type: </td>
+                    <td><a th:href="@{/list/jobs(column=positionType,value=${job.positionType})}" th:text="${job.positionType}">Job Position Type</a></td>
                 </tr>
                 <tr>
-                    <td>Skill</td>
-                    <td th:text="${job.coreCompetency}">Job Skill</td>
+                    <td>Skill: </td>
+                    <td><a th:href="@{/list/jobs(column=coreCompetency,value=${job.coreCompetency})}" th:text="${job.coreCompetency}">Job Skill</a></td>
                 </tr>
             </table>
         </th:block>
