@@ -123,7 +123,7 @@ public class TestTaskThree {
         Model model = new ExtendedModelMap();
         displaySearchResultsMethod.invoke(searchController, model, "skill", "ruby");
         assertNotNull(model.getAttribute("jobs"));
-        assertNotNull(model.getAttribute("columns"));
+        assertNotNull(model.getAttribute("columnSelected"));
     }
 
 }
